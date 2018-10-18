@@ -20,10 +20,14 @@ afterAll(async () => {
 });
 
 describe('Basic Text & Element Inclusion', () => {
-  // it('Should display "Taboola" text on page', async () => {
-  //
-  //   await expect(page).toInclude('Taboola');
-  // });
+  beforeEach( async () => {
+    await page.goto(APP, { waitUntil: "networkidle2" } );
+  });
+
+  it('Should display "Taboola" text on page', async () => {
+    const html = await page.$eval('.header', e => e.innerHTML)
+    await expect(html).toContain('Taboola');
+  });
 
   it('Should assert that <title> is correct', async () => {
     const title = await page.title()
