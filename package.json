@@ -4,7 +4,7 @@
   "description": "Taboola Recommendation Code Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_ENV=testing jest"
   },
   "author": "Richard Scheiwe",
   "license": "ISC",
@@ -14,7 +14,9 @@
     "http-server": "^0.11.1",
     "isomorphic-fetch": "^2.2.1",
     "jest": "^23.6.0",
-    "jest-puppeteer": "^3.4.0"
+    "jest-puppeteer": "^3.4.0",
+    "puppeteer": "^1.9.0",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
