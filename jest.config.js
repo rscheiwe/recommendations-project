@@ -6,5 +6,7 @@
     transform: {
     '^.+\\.js$': 'babel-jest',
   },
+  testEnvironment: 'node',
+  bail: true,
   };
 }
