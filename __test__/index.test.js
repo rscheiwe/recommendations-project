@@ -16,7 +16,7 @@ beforeAll(async () => {
 
 
 afterAll(async () => {
-    await page.close();
+  await page.close();
 });
 
 describe('Basic Text & Element Inclusion', () => {
