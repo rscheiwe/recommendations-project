@@ -1,0 +1,199 @@
+/* MOBILE RESPONSIVENESS, generalized for most mobile devices */
+@media only screen
+	and (max-device-width : 405px)
+	and (max-device-height : 812px)
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation : portrait) {
+
+    .parent > div {
+      display:inline !important;
+      min-width: 90% !important;
+      margin:0% !important;
+    }
+
+    /* FLEX CONTAINER */
+    .container {
+      width: 100% !important;
+      flex-wrap:nowrap !important;
+    }
+
+    /* FLEX ITEMS */
+    .container div {
+      width:100% !important;
+      margin:0px !important;
+    }
+
+    /* CATEGORY overlay */
+    p span {
+      font-size:3vw !important;
+    }
+  }
+/* ----------------------- */
+
+/* Accounting for flex adjustments to keep layout grid at 3x2 */
+@media ( max-width: 555px) {
+  .container div {
+    flex:0 0 30% !important;
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
+  p span {
+    letter-spacing: 2px !important;
+    font-size:2vw !important;
+  }
+}
+/* ----------------------- */
+
+/* mocking  mobile behavior for testing purposes */
+@media ( max-width: 450px) {
+  .container {
+    width: 100% !important;
+  }
+
+  .container div {
+    flex:0 0 100% !important;
+  }
+
+  p span {
+    font-size:3vw !important;
+  }
+  .header {
+    padding:1px 1% 2px 1% !important;
+
+  }
+}
+/* ----------------------- */
+
+/* MAIN CONTAINER. Set at `width:80%` & `margin-top:10%` to mimic Taboola layout */
+.parent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-top:10%;
+  background-color: rgba(230, 230, 230, .5);
+}
+
+/* FLEX CONTAINER */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FLEX ITEMS (individual RECOMMENDATIONS) */
+.container div{
+  flex: 0 0 32%;
+  margin-left: 2px;
+  margin-right: 2px;
+  align-self:flex-start;
+}
+/* ----------------------- */
+
+/* IMAGE STYLING */
+.img-holder {
+  position: relative;
+  display: inline-block;
+}
+
+.img-holder img {
+  display: block;
+}
+
+.img {
+  max-width:100%;
+}
+
+.img-holder p {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: left;
+  color: #fff;
+}
+
+p span {
+  color: white;
+  font: 1.5vw Helvetica;
+  letter-spacing: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  padding:0 5px;
+}
+/* ----------------------- */
+
+/* HEADER element */
+.header {
+  display:flex;
+  list-style-type:none;
+  padding:1px 2% 2px 2%;
+}
+
+.header > li:first-child {
+  margin-right:auto;
+}
+/* ----------------------- */
+
+/* ELLIPSIS for title-line overflow */
+.ellipsis {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+}
+/* ----------------------- */
+
+/* GENERAL STYLING */
+p {
+  font-family:sans-serif;
+  font-size:.65em;
+  margin-top:-3px;
+}
+
+li {
+  font-family:sans-serif;
+  font-size:.5em;
+  margin-top:3px;
+}
+
+a {
+  text-decoration:none;
+  color:black;
+}
+
+h2 {
+  font-family:sans-serif;
+  text-align:center;
+  font-size:1em;
+}
+
+.small {
+  font-size:.5em;
+  color:gray;
+  margin-top:-5px;
+}
+
+.larger {
+  font-size:.85em;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+.logo {
+  width:1em;
+  padding-left:2px;
+  content:url('https://3.bp.blogspot.com/-Lb3H3QiLlRE/V3KQgMq2r7I/AAAAAAAABcA/tfv2rSEHOsUIE_uIGuHbvciEFPeBAOZlgCLcB/s1600/Small%2BBlue%2BTriangle%2BOn%2BAn%2BAd%2BDoes%2BNot%2BMean%2BIt%2BIs%2BGoogle%2BAd.png')
+}
+
+.placeholder {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+  content: url('https://upload.wikimedia.org/wikipedia/en/3/3c/Taboola_logo.png')
+}
