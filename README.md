@@ -12,9 +12,9 @@ I created a responsive widget that renders article recommendations from an API c
 
 Each recommendation (via response JSON) includes: Image, Title, Sponsor, and Article Category. The included content is clickable and redirects to the article source.
 
-Further, the user's browser language is detected, and the Header is reset based on the user's preferred language (e.g., from `'en-US` to `fr`, etc.). See the `detectLanguage()` method in `scripts.js` for more information. 
+Further, the user's browser language is detected, and the Header is reset based on the user's preferred language (e.g., from `'en-US'` to `fr`, etc.). See the `detectLanguage()` method in `scripts.js` for more information. 
 
-As a final bonus, the title only takes up three lines if it is too long, based on responsive. Should the title exceed three lines, an ellipsis is implemented.
+As a final bonus, the title only takes up three lines if it is too long, based on responsiveness. Should the title exceed three lines, an ellipsis is implemented.
 
 ## Getting Started
 
